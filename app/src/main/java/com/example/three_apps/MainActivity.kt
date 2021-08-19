@@ -1,7 +1,7 @@
 package com.example.three_apps
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.three_apps.databinding.ActivityMainBinding
@@ -23,5 +23,25 @@ class MainActivity : AppCompatActivity() {
         setupWithNavController(binding.bottomNavigation, navController)
 
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }

@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/cadastroFragment"
-        android:name="com.example.three_apps.cadastroFragment"
+        android:name="com.example.three_apps.loginFragment"
         android:label="fragment_cadastro"
-        tools:layout="@layout/fragment_cadastro" >
+        tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_cadastroFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />

@@ -1,104 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_dark"
     tools:context=".perfilFragment">
 
-   <ImageView
-       android:id="@+id/ivFoto"
-       android:layout_width="400dp"
-       android:layout_height="150dp"
-       android:src="@mipmap/ic_foto_perfil_foreground"
-       android:layout_margin="20dp"
-       app:layout_constraintStart_toStartOf="@id/cardCentro"
-       app:layout_constraintBottom_toTopOf="@id/cardCentro"
-       app:layout_constraintEnd_toEndOf="@id/cardCentro"
-       />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardCentro"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="140dp"
-        app:cardCornerRadius="40dp"
+
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/ic_foto_perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
 
-        <TextView
-            android:id="@+id/nome"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="14dp"
-            android:text="@string/ronan_fernandes_de_araujo"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAlignment="center"
+        />
 
-            />
+    <View
+        android:id="@+id/viewContainer"
+        style="@style/Container"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFoto"
+
+        />
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ronan_fernandes_de_araujo"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/viewContainer"
+        app:layout_constraintStart_toStartOf="@id/viewContainer"
+        app:layout_constraintTop_toTopOf="@id/viewContainer"
+
+        />
+
+    <TextView
+        android:id="@+id/tvProfissao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/android_developer"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="#673AB7"
+        app:layout_constraintEnd_toEndOf="@id/viewContainer"
+        app:layout_constraintStart_toStartOf="@id/viewContainer"
+        app:layout_constraintTop_toBottomOf="@id/tvNome"
+
+        />
+
+    <TextView
+        android:id="@+id/tvSobre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/Widget.AppCompat.TextView"
+        android:layout_margin="10dp"
+        android:text="@string/conhecimentos_em_kotlin_e_android_github_dos_meus_projetos"
+        app:layout_constraintStart_toStartOf="@id/viewContainer"
+        app:layout_constraintEnd_toEndOf="@id/viewContainer"
+        app:layout_constraintTop_toBottomOf="@id/tvProfissao"
+    />
+
+    <ImageView
+        android:id="@+id/ivGithub"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_logo_github"
+        app:layout_constraintStart_toStartOf="@id/viewContainer"
+        app:layout_constraintEnd_toEndOf="@id/viewContainer"
+        app:layout_constraintTop_toBottomOf="@id/tvSobre"
+
+        />
 
 
-        <TextView
-            android:id="@+id/tvAndroidDeveloper"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="@string/android_developer"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="italic"
-            android:textAlignment="center"
-            />
-
-
-
-        <TextView
-            android:id="@+id/conhecimentos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/conhecimentos"
-            android:textColor="@color/black"
-            android:layout_marginTop="130dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAlignment="center"
-             />
-
-        <ImageView
-            android:id="@+id/kotlin"
-            android:layout_width="100dp"
-            android:layout_height="74dp"
-            android:layout_marginTop="170dp"
-            android:src="@mipmap/ic_foto_kotlin"
-            android:layout_marginStart="100dp"
-
-            />
-
-        <TextView
-            android:id="@+id/tvFrase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/learn_by_praticing"
-            android:layout_marginTop="270dp"
-            android:textAlignment="center"
-            android:textStyle="italic"
-            style="@style/CardView.Dark"
-            android:textSize="20sp"
-
-
-            />
-
-
-
-
-
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -4,17 +4,17 @@
         android:id="@+id/imcFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_calculate_24"
-        android:title="@string/text_label_1"/>
+        android:title="@string/imc"/>
     <item
         android:id="@+id/cadastroFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="@string/cadastro"/>
+        android:icon="@drawable/ic_baseline_vpn_key_24"
+        android:title="@string/login"/>
     <item
         android:id="@+id/perfilFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="@string/Perfil"/>
+        android:title="@string/perfil"/>
 
 
 </menu>
